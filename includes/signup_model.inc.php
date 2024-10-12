@@ -21,7 +21,7 @@
     }
 
     function set_user(object $pdo,string $password,string $name,string $email){
-        $query="INSERT INTO users WHERE (name,email,password) VALUES (:name,:email,:password);";
+        $query="INSERT INTO users (name,email,password) VALUES (:name,:email,:password);";
         $stmt = $pdo->prepare($query);
         $hashedPassword=password_hash($password,PASSWORD_BCRYPT);
         $stmt->bindParam(":name",$name);
