@@ -14,9 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if(is_input_empty($email,$name,$password)){
             $errors["empty_input"] = "fill in all fields!";
         }
-        if (!is_password_valid($password)) {
-            $errors["invalid_password"] = "Password must be at least 8 characters long!";
-        }
+        // if (!is_password_valid($password)) {
+        //     $errors["invalid_password"] = "Password must be at least 8 characters long!";
+        // }
         if(is_email_invalid($email)){
             $errors["invalid_email"] = "Invalid email format!";
         }

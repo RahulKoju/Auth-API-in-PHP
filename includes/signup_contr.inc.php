@@ -11,7 +11,7 @@
     }
     function is_password_valid(string $password): bool {
         // Check password length (at least 8 characters, for example)
-        if (strlen($password) < 8) {
+        if (strlen($password) <= 8) {
             return false;
         }
         // Optionally, you can add more checks (like checking for upper case, special characters, etc.)
