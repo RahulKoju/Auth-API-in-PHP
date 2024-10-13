@@ -17,15 +17,15 @@ require_once "includes/signup_view.inc.php";
         <form action="includes/signup.inc.php" method="POST">
             <div class="form-group">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password">
             </div>
             <button type="submit" class="btn">Sign Up</button>
         </form>
@@ -34,17 +34,18 @@ require_once "includes/signup_view.inc.php";
         <form action="includes/login.inc.php" method="POST">
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email">
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password">
             </div>
             <button type="submit" class="btn">Login</button>
         </form>
+        <?php
+            check_signup_errors();
+        ?>
     </div>
-    <?php
-    check_signup_errors();
-    ?>
+    
 </body>
 </html>
