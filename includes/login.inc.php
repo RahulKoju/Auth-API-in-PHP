@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $errors["login_incorrect"] = "Incorrect login info!";
         }
         if(!is_email_wrong($result) && is_password_wrong($password,$result["password"])){
-            $errors["login_incorrect"] = "Incorrect login info!";
+            $errors["login_incorrect"] = "Incorrect password!";
         }
 
         require_once "config_session.inc.php";
