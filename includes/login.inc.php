@@ -34,9 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location:../index.php");
             die();
         }
-        $newSessionId = session_create_id();
-        $sessionId=$newSessionId . "_" . $result["id"];
-        session_id($sessionId);
+        session_regenerate_id(true);
 
         $_SESSION["user_id"]=$result["id"];
         $_SESSION["user_name"]=htmlspecialchars($result["name"]);
