@@ -13,7 +13,7 @@
 
     session_start();
 
-    if($_SESSION["user_id"]){
+    if(isset($_SESSION["user_id"]) &&  $_SESSION["user_id"]){
         if(!isset($_SESSION["last_regeneration"])){
             regenerate_session_id_loggedin();
         }
